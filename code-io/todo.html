@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
 </head>
+
 <body>
     <h2>Todo List</h2>
-    <ul id= "todoList">
+    <ul id="todoList">
     </ul>
     <div>
         <input id="addTask" type="text">
@@ -24,19 +26,20 @@
 
     let list = new Array();
 
-    submit.addEventListener('click', (event)=>{
-        if(addTask.value != ''){
+    submit.addEventListener('click', (event) => {
+        if (addTask.value != '') {
             list.push(addTask.value);
-            todoList.innerHTML += '<li id="+list.length-1+"><button onclick="complete('+(list.length-1)+')">'+addTask.value+'</button></li>';
+            todoList.innerHTML += '<li id="' + (list.length - 1) + '"><button onclick="complete(' + (list.length - 1) + ')">' + addTask.value + '</button></li>';
             addTask.value = '';
         }
     });
 
-    function complete(id){
-        doneList.innerHTML += '<li>'+list[id]+'</li>';
-        
+    function complete(id) {
+        doneList.innerHTML += '<li>' + list[id] + '</li>';
+        document.getElementById(id).style.display = "none";
     }
-    
+
 
 </script>
+
 </html>
