@@ -13,6 +13,8 @@
         <input id="addTask" type="text">
         <button id="submit" onclick="addTask()">Add task</button>
     </div>
+    <h3>Completed</h3>
+    <ul id="doneList"></ul>
 </body>
 <script>
     let submit = document.getElementById('submit');
@@ -22,9 +24,11 @@
     let list = new Array();
 
     submit.addEventListener('click', (event)=>{
-        list.push(addTask.value);
-        todoList.innerHTML += '<li id="+list.length-1+">'+addTask.value+'</li>';
-        addTask.value = '';
+        if(addTask.value != ''){
+            list.push(addTask.value);
+            todoList.innerHTML += '<li id="+list.length-1+"><button onclick="complete()">'+addTask.value+'</button></li>';
+            addTask.value = '';
+        }
     });
 </script>
 </html>
