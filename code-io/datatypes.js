@@ -21,4 +21,4 @@ console.log(typeof str);
 
 let embd = `1+2 = ${1+2}`;
 
-console.log(embd);
+console.log(embd)
