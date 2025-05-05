@@ -8,3 +8,9 @@ operation(a,b);
 operation(2,3);
 
 operation(100,20);
+
+
+
+let x5 = (n) => 5*n;
+
+console.log(x5(6));

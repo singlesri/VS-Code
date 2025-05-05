@@ -16,13 +16,13 @@
 <script>
     let submit = document.getElementById('submit');
     let addTask = document.getElementById('addTask');
-    let todoList = document.getElementById('todoLit')
+    let todoList = document.getElementById('todoList')
 
     let list = new Array();
 
     submit.addEventListener('click', (event)=>{
         list.push(addTask.value);
-        todoList.innerHTML += '<li id="+list.lenth-1+">'+addTask.value+'</li>';
+        todoList.innerHTML += '<li id="+list.length-1+">'+addTask.value+'</li>';
         addTask.value = '';
     });
 </script>
