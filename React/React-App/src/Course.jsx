@@ -1,15 +1,25 @@
+import PropTypes from 'prop-types';
 import HTML from './assets/t1.jpeg'
 
-const course1 = "This a javascript string implement Method in React"
+const course1 = "HTML"
 
 function Course(props) {
-    return (
-        <div className="card">
-            <img src={props.image} alt="" />
-            <h3>{props.name}</h3>
-            <p>{props.price}</p>
-        </div>
-    );
+    
+    if(props.show == true){
+        return (
+            <div className="card">
+                <img src={props.image} alt="" />
+                <h3>{props.name}</h3>
+                <p>{props.price}</p>
+                <span>{props.rating}</span> 
+            </div>
+        );
+    }
+    else{
+        return(
+            <div className="card">Course not found</div>
+        )
+    }
 }
 
 Course.defaultProps = {
@@ -17,5 +27,11 @@ Course.defaultProps = {
     price : "Not set",
     image : HTML
 };
+
+Course.propTypes = {
+    name : PropTypes.string,
+    rating : PropTypes.number,
+    show : PropTypes.bool
+}
 
 export default Course

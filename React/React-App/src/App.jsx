@@ -10,9 +10,9 @@ import tee from './assets/t3.jpeg'
 function App() {
   return (
     <>
-    <Course name="HTML" price="199$" image={Html}/>
-    <Course name="Butcher" price="$150" image={tshirt}/>
-    <Course name="JSS" price="$300" image={tee}/>
+    <Course name="HTML" price="199$" image={Html} rating={5} show={true}/>
+    <Course name="Butcher" price="$150" image={tshirt} show={true}/>
+    <Course name="JSS" price="$300" image={tee} show={true}/>
     <Course />
     </>
   );
