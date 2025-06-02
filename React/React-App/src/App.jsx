@@ -3,8 +3,8 @@ import Navbar from './Navbar';
 import Course from './Course';
 import Footer from './Footer';
 import Html from './assets/t1.jpeg';
-import tshirt from './images/t2.jpeg';
-import tee from './images/t3.jpeg'
+import tshirt from './assets/t2.jpeg';
+import tee from './assets/t3.jpeg'
 
 
 function App() {

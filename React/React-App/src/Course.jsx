@@ -16,6 +16,6 @@ Course.defaultProps = {
     name : "Sample Default",
     price : "Not set",
     image : HTML
-}
+};
 
 export default Course
