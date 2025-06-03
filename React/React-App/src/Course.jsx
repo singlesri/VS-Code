@@ -4,8 +4,7 @@ import HTML from './assets/t1.jpeg'
 const course1 = "HTML"
 
 function Course(props) {
-    
-    if(props.show == true){
+
         return (
             <div className="card">
                 <img src={props.image} alt="" />
@@ -14,12 +13,6 @@ function Course(props) {
                 <span>{props.rating}</span> 
             </div>
         );
-    }
-    else{
-        return(
-            <div className="card">Course not found</div>
-        )
-    }
 }
 
 Course.defaultProps = {
