@@ -38,7 +38,7 @@ function CourseList() {
 
     courses.sort((x,y) => y.price - x.price)
 
-    const vfmCourses = courses.filter((course)=> course.price<200)
+    const vfmCourses = courses.filter((course)=> course.price<400)
 
     const coursesList = vfmCourses.map(
         (course, index) => 
